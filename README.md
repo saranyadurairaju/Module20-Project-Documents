@@ -13,20 +13,32 @@ Analysis dashboard:  [Link to Web Page](http://emission-tableau1.herokuapp.com/)
 
 
 ## Table of Contents
-  * [Overview](#overview)
-  * [Analysis](#analysis)
+  * [Overview](#view)
+  * [Analysis](#start)
   * [FlowChart](#flowchart)
-  * [Methods of Recommendation](#machine-learning)
-    * [Similarity-Based CF](#similarity-based)
-    * [User-Based CF](#ratings-based)
-  * [Technologies](#technologies)
+  * [Database](#data)
+  * [MachineLearning](#machinelearning)
+    * [LinearRegression](#linearregression)
+    * [ClassificationAlgorithms](#classificationalgorithms)
+  * [Visualization](#viz)
+  * [Technologies](#tech)
+  * [Recommendations](#future)
+  * [Summary](#result)
 
-## <a name="overview"></a>Overview
+## <a name="view"></a>Overview
 Global warming is one of the biggest problems we are facing now. Not only industrialized emission, agriculture and forest land emissions also play a big role in contributing to global warming by releasing greenhouse gases (GHG) such as CO2, CH4, N2O. After this analysis we will know more about agriculture and forestland emission.  
 
 This project aims to deliver detailed view of each Country, Element, Items that are contributing to emission each Year. Also using the Machine Learning model, the data is anlayzed and categorized into zones. Our purpose is to Analyze the Emission data and to create a complete system from Cleaning to Modelling. 
 
-## <a name="analysis"></a>Analysis
+## <a name="start"></a>Analysis
+
+The Uncleaned Emission and Population data are moved in to two data frames .
+Dropped the Unit column as it contains the  same data.
+Normalized the data by changing the Year columns to rows using the “melt” statement.
+The column names are changed in to standard form. 
+Dropped the Years from 1961 to 1989 as it have very negligible informations.
+All the null values are changed to zeros.
+The cleaned data is saved as CSV file and saved in AWS’ s3 bucket too.
 
 
 The project consists of these portions:
@@ -61,20 +73,22 @@ PROJECT
 
 ## <a name="flowchart"></a>Flow Chart
 
-## <a name="machine-learning"></a>Machine Learning
+## <a name="data"></a>Data Base
 
-#### <a name="similarity-based"></a>Based on Similarity
-This recommendation will be based on similarity between beers. Select one of the beers you like and a factor you think is the most important between flavor, aroma and texture for the beer. 
+## <a name="machinelearning"></a>Machine Learning
 
-#### <a name="ratings-based"></a>Based on Ratings
-This recommendation will be based on your ratings for three beers that you choose to rate. Select three beers you know and rate them - ratings can be between 1 to 5. 
+#### <a name="linearregression"></a>Linear Regression
+Linear graph 
+
+#### <a name="classificationalgorithms"></a>Classification Algorithms
+Zone between 0 to 3. 
 
 
-## Deployment
-This app is deployed publicly on Heroku, click [here](https://beer-recommendation-app.herokuapp.com/) to check it out!
+## <a name="viz"></a>Visualization
+This emission analysis is deployed publicly on Heroku, click [here](http://emission-tableau1.herokuapp.com//) to check it out!
  
  
-## <a name="technologies">Technologies</a>
+## <a name="tech">Technologies</a>
 This project was created with:
 * JavaScript
 * HTML/CSS
@@ -84,6 +98,9 @@ This project was created with:
 * Pandas
 * Jupyter Notebook
 
+## <a name="future"></a>Recommendations
 
+## <a name="result"></a>Summary
 
-Find the completed Toronto New Restaurant Analysis dashboard here: [Beer Recommendation App](https://beer-recommendation-app.herokuapp.com/)
+Completed Emission Analysis Webpage: [Emission_Analysis_Web](http://emission-tableau1.herokuapp.com/)
+Analysis results in the static page: https://saranyadurairaju.github.io/Module20-static-webpage/
