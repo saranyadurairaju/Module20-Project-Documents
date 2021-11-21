@@ -25,7 +25,6 @@ Analysis dashboard:  [Link to Web Page](http://emission-tableau1.herokuapp.com/)
     * [Static Webpage](#staticpage)
     * [Dashboard](#heroku)
   * [Technologies](#tech)
-  * [Challenges](#issue)
   * [Summary](#result)
 
 ## <a name="view"></a>Overview
@@ -101,7 +100,7 @@ The source data was analyzed properly and cleaned for further processing. Below 
 
 * Null values replaced with zero and the cleaned data is finally saved as CSV file and moved to AWS’ S3 bucket.
 
-### Analytical Charts
+### Charts
 
 * Trend of elements which cause Emission over years are plotted as a line graph
 
@@ -202,29 +201,53 @@ A random forest classifier works with data having discrete labels or better know
 
 The above results show that the Logistic Regression Algorithm classifies the Emission more accurately than Random Forest Classifier. Since our data is Skewed (Stratify was used) and Imbalanced which results in more number of items in specific categories. This might be the reason that our Logistic performed better than the Random Forest. Also, Logistic regression performs better when the number of noise variables is less than or equal to the number of explanatory variables. (Noise variables - Difficult or impossible to control; Explanatory Variable - manipulated in an experiment by a researcher). So. which model performs better completely depends on our Data set.
 
+```With our Classification model, we can easily categories the countries into zones (Red, Orange, Yellow & Green) according to the impacting Items, Emission value and Population. Let's aim to have most of the countries into our Zone 0 in future```
 
 For more details about Machine Learning Model, please visit : [ML_Repo](https://github.com/saranyadurairaju/Module20-Final-Assignment)
 
 ## <a name="viz"></a>Visualization
-Have to add points
- 
+
+Now its time to visualize all the information and results in a webpage for easy and interactive way. 
+
 ### <a name="staticpage"></a>Static Webpage
 
-Analysis results in the static page: https://saranyadurairaju.github.io/Module20-static-webpage/
+Static Webpage is created to summarize and visualize the analytical charts and Machine Learning Model results using HTML, CSS.
+
+Analysis results: [static page](https://saranyadurairaju.github.io/Module20-static-webpage/)
 
 ### <a name="heroku"></a>Dashboard
 
-Completed Emission Analysis Webpage: [Emission_Analysis_Web](http://emission-tableau1.herokuapp.com/)
+Tableau emission story is incorporated as a Webpage using HTML to make it more flexible and interactive. Tableau story consists of below items:
+
+* Map, Bubble chart of Countries with Population and Total Emission
+* Views of Item wise emission data 
+* Element wise emission details for countries
+
+Complete Emission Analysis Webpage: [Emission_Analysis_Web](http://emission-tableau1.herokuapp.com/)
  
 ## <a name="tech">Technologies</a>
 
-![image](https://user-images.githubusercontent.com/85472349/142782855-5faeba39-db79-4345-9f0d-a93b804de95e.png)
+The below tools and softwares are used for this project: 
 
-
-
-## <a name="issue"></a>Challenges
+* Python 
+* HTML/CSS
+* Postgres
+* Jupyter Notebook
+* Tableau
+* Plotly
+* Heroku
+* AWS
+* SQLAlchemy
 
 ## <a name="result"></a>Summary
+
+* Analysis of data using charts
+* Relationship is determined using Linear Regression
+* Categorized the data into Zones according to the Emission value
+* Easy and Interactive dashboard data visualization
+
+**With our results, its easy to predict where and how fast the action needs to be taken. Hoping to bring all the countries into our Green Zone soon!!!**
+
 
 
 
