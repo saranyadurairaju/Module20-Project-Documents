@@ -5,7 +5,7 @@ _Date_: November, 24th, 2021\
 _Data Analytics & Machine Learning Project_ : **Emission Analysis** <br/>
 
 
-Presentation: [Link to Google Slides Presentation](https://docs.google.com/presentation/d/1YAfvlpk0U3Oy9Srs9rTvzcp4tBlyMZlRyR9JFlisfMc/edit#slide=id.g10116574057_0_2)
+Presentation: [Link to Presentation](https://onedrive.live.com/view.aspx?resid=B51D62DA80D49BB1!7979&ithint=file%2cpptx&authkey=!AMpiq2tPZV8M22Y)
 
 Analysis dashboard:  [Link to Web Page](http://emission-tableau1.herokuapp.com/)
 
@@ -15,8 +15,8 @@ Analysis dashboard:  [Link to Web Page](http://emission-tableau1.herokuapp.com/)
 
 ## Table of Contents
   * [Overview](#view)
-  * [Analysis](#start)
   * [FlowChart](#flowchart)
+  * [Analysis](#start)
   * [Database](#data)
   * [Machine Learning](#machinelearning)
     * [Linear Regression](#linearregression)
@@ -25,7 +25,7 @@ Analysis dashboard:  [Link to Web Page](http://emission-tableau1.herokuapp.com/)
     * [Static Webpage](#staticpage)
     * [Dashboard](#heroku)
   * [Technologies](#tech)
-  * [Recommendations](#future)
+  * [Challenges](#issue)
   * [Summary](#result)
 
 ## <a name="view"></a>Overview
@@ -33,18 +33,15 @@ Global warming is one of the biggest problems we are facing now. Not only indust
 
 This project aims to deliver detailed view of each Country, Element, Items that are contributing to emission each Year. Also using the Machine Learning model, the data is anlayzed and categorized into zones. Our purpose is to Analyze the Emission data and to create a complete system from Cleaning to Modelling. 
 
-## <a name="start"></a>Analysis
+### Source of Data:
+We have used the data from data source of Food and Agriculture Organization of United Nation. This data is reliable and easily available. 
 
-The Uncleaned Emission and Population data are moved in to two data frames .
-Dropped the Unit column as it contains the  same data.
-Normalized the data by changing the Year columns to rows using the “melt” statement.
-The column names are changed in to standard form. 
-Dropped the Years from 1961 to 1989 as it have very negligible informations.
-All the null values are changed to zeros.
-The cleaned data is saved as CSV file and saved in AWS’ s3 bucket too.
+https://www.fao.org/faostat/en/#data/GT
+
+**Image sources** : https://github.com/bireshk/DataAnalyticsProject/blob/main/Data/Image_Sources.txt
 
 
-The project consists of these portions:
+The project folder consists of these technical portions:
 ```
 PROJECT
 ├── .gitignore
@@ -85,7 +82,73 @@ PROJECT
 
 ## <a name="flowchart"></a>Flow Chart
 
+Below diagram represents the complete flow chart of the project:
+
+![image](https://user-images.githubusercontent.com/85472349/142781485-c2a0ad38-0903-4fee-8239-faad5a15bb42.png)
+
+
+## <a name="start"></a>Analysis
+
+The source data was analyzed properly and cleaned for further processing. Below are the steps followed on data transformation:
+
+* Uncleaned Emission and Population data are moved in to two separate data frames
+
+* Dropped the "Unit" columns from both Emission and Population datasets as it contains the same information(**Emission** - Kilotonnes, **Population** - 1000persons)
+
+* Dropped the Years from 1961 to 1989 as it have very negligible informations.
+
+* Normalized the data by changing the Year columns to rows using the “melt” statement.
+
+* Null values replaced with zero and the cleaned data is finally saved as CSV file and moved to AWS’ S3 bucket.
+
+### Analytical Charts
+
+* Trend of elements which cause Emission over years are plotted as a line graph
+
+* Emission of top 25 countries are plotted using a bar chart
+
+* Emission over years are plotted using a scatter plot
+
+* Percentage of Emission caused by different Items such as Rice Cultivation, Manure Management, Savanna Fire etc. are plotted
+
+* The Items causing CH4, N2O & CO2 emissions are seperatly plotted using Pie charts.
+
+![image](https://user-images.githubusercontent.com/85472349/142782476-8dfd8342-cc50-4952-8521-a81ca4f3c965.png)
+
+
+**Results**
+
+* CO2 emission is having the highest percentage.
+
+* CH4 and N2O emission is much less than CO2, but with high warming potential. 
+
+* Brazil has the highest Agriculture and Forest land emission, Indonesia comes second.
+
+* Russian Federation has the lowest Agriculture and land emission, Romania comes next.
+
+* When we look at the emission over years, there is lot of variations and it's going upwards from 2010 onwards.
+
+
 ## <a name="data"></a>Data Base
+
+* The Emission table and Population table are merged to create the new Emission table with population using the common column "Area_Code"
+
+* Merged table has been splitted into two separate table to have countries (Area_Code < 5000) and world records (Area_Code >= 5000)
+
+* The data is then moved to AWS S3 bucket for project Analyis and Postgres for storage, future data retrieval
+
+![image](https://user-images.githubusercontent.com/85472349/142781510-71497eac-63e7-4fad-b5d6-0dbe9e3a720f.png)
+
+### Subtables
+
+* The main source table "Emission" is split into four tables like Area, Element, Item, Emission and moved to Postgres using SQLAlchemy
+
+* Using the join and query, the same table can be retrieved in future for analysis
+
+* This helps us in Easy storage, data backup and efficiency
+
+![image](https://user-images.githubusercontent.com/85472349/142781510-71497eac-63e7-4fad-b5d6-0dbe9e3a720f.png)
+
 
 ## <a name="machinelearning"></a>Machine Learning
 
@@ -100,6 +163,8 @@ Linear regression attempts to model the relationship between two variables by fi
 **Global Green House Gas Emission Analysis**
 
 ![image](https://user-images.githubusercontent.com/85472349/141962584-68e4989b-5cc5-4c49-9c5c-1b83b70c42d1.png)
+
+```Linear Regression results help us to view whether the Emission data is constantly increasing or decreasing, how the data are linearly related, Items which need immediate attention etc. ```
 
 
 ### <a name="classificationalgorithms"></a>Classification Algorithms
@@ -152,21 +217,12 @@ Analysis results in the static page: https://saranyadurairaju.github.io/Module20
 Completed Emission Analysis Webpage: [Emission_Analysis_Web](http://emission-tableau1.herokuapp.com/)
  
 ## <a name="tech">Technologies</a>
-This project was created with:
-* JavaScript
-* HTML/CSS
-* D3
-* Flask
-* Python 3.8
-* Pandas
-* Jupyter Notebook
 
-## <a name="future"></a>Sources
-datalink
-For image sources : https://github.com/bireshk/DataAnalyticsProject/blob/main/Data/Image_Sources.txt
+![image](https://user-images.githubusercontent.com/85472349/142782855-5faeba39-db79-4345-9f0d-a93b804de95e.png)
 
 
-## <a name="future"></a>Recommendations
+
+## <a name="issue"></a>Challenges
 
 ## <a name="result"></a>Summary
 
