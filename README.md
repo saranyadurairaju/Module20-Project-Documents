@@ -249,6 +249,8 @@ The below tools and softwares are used for this project:
 **With our results, its easy to predict where and how fast the action needs to be taken. Hoping to bring all the countries into our Green Zone soon!!!**
 
 
+![image](https://user-images.githubusercontent.com/85472349/142783875-e54ce30a-3125-43bd-af08-7d16a864cc34.png)
+
 
 
 
