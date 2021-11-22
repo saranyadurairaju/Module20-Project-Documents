@@ -215,6 +215,15 @@ Static Webpage is created to summarize and visualize the analytical charts and M
 
 Analysis results: [static page](https://saranyadurairaju.github.io/Module20-static-webpage/)
 
+### Emission Guage Meter 
+
+Select the country and view the Emission value and the corresponding zones in Gauge:
+
+![image](https://user-images.githubusercontent.com/85472349/142941076-edd9a19a-54ba-47d6-99bb-bd74af704e23.png)
+
+For more details: [gauge_repo](https://github.com/saranyadurairaju/Module20-Final-Assignment)
+
+
 ### <a name="heroku"></a>Dashboard
 
 Tableau emission story is incorporated as a Webpage using HTML to make it more flexible and interactive. Tableau story consists of below items:
