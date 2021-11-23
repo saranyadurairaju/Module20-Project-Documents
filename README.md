@@ -5,7 +5,7 @@ _Date_: November, 24th, 2021\
 _Data Analytics & Machine Learning Project_ : **Emission Analysis** <br/>
 
 
-Presentation: [Link to Presentation](https://docs.google.com/presentation/d/12OnnWrXtW2hVmTFn6SiGSgVM-KbVKFVs/edit?usp=sharing&ouid=100492781710713822970&rtpof=true&sd=true)
+Presentation: [Link to Presentation](https://1drv.ms/p/s!ArGb1IDaYh21vi0wHKInS7dajIuP?e=zmY068)
 
 Analysis dashboard:  [Link to Web Page](http://emission-tableau1.herokuapp.com/)
 
