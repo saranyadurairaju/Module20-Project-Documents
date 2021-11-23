@@ -14,6 +14,7 @@ Analysis dashboard:  [Link to Web Page](http://emission-tableau1.herokuapp.com/)
 
 
 ## Table of Contents
+
   * [Overview](#view)
   * [FlowChart](#flowchart)
   * [Analysis](#start)
@@ -130,7 +131,7 @@ The source data was analyzed properly and cleaned for further processing. Below 
 
 * Russian Federation has the lowest Agriculture and land emission, Romania comes next.
 
-* When we look at the emission over years, there is lot of variations and it's going upwards from 2010 onwards.
+* Emission over years has lot of variations and it's going upwards from 2010 onwards.
 
 
 ## <a name="data"></a>Data Base
@@ -175,9 +176,13 @@ Linear regression attempts to model the relationship between two variables by fi
 ### <a name="classificationalgorithms"></a>Classification Algorithms
 
 * Machine learning methods that predict the future Emission depends on many factors like soil temperature, air moisture, Volumetric Water Content(VWC)
+
 * Classification algorithms will help us identifying the Emission values into different Zones for each Elements
+
 * Classifying the Target variable “Zones” into Binary Values is not possible as the data is Imbalanced
+
 * Multiclass classification is the problem of classifying instances into one of three or more classes
+
 * Data pre-processing and Categorizing Element, Item, Year, Population, Emission features
 
 
@@ -204,6 +209,7 @@ A random forest classifier works with data having discrete labels or better know
 The confusion matrix from both models shows that the True Positive (TP) values are relatively high. Also, Type I, Type II errors are also less. Compare to Random Forest, Logistic Regression shows good results. Below table represents the classification report values of both Elements from the models. 
 
 ![image](https://user-images.githubusercontent.com/85472349/141973384-fcd1b24f-42be-4f14-a5db-994ff5471916.png)
+
 
 ### ML Summary
 
@@ -239,7 +245,7 @@ Tableau emission story is incorporated as a Webpage using HTML to make it more f
 
 
 
-#### Emission Guage Meter 
+#### Emission Gauge Meter 
 
 The country and the Emission value with corresponding zones can be viewed in Gauge meter like below:
 
