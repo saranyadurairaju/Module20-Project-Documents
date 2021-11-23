@@ -28,11 +28,13 @@ Analysis dashboard:  [Link to Web Page](http://emission-tableau1.herokuapp.com/)
   * [Summary](#result)
 
 ## <a name="view"></a>Overview
+
 Global warming is one of the biggest problems we are facing now. Not only industrialized emission, agriculture and forest land emissions also play a big role in contributing to global warming by releasing greenhouse gases (GHG) such as CO2, CH4, N2O. After this analysis we will know more about agriculture and forestland emission.  
 
 This project aims to deliver detailed view of each Country, Element, Items that are contributing to emission each Year. Also using the Machine Learning model, the data is anlayzed and categorized into zones. Our purpose is to Analyze the Emission data and to create a complete system from Cleaning to Modelling. 
 
 ### Source of Data:
+
 We have used the data from data source of Food and Agriculture Organization of United Nation. This data is reliable and easily available. 
 
 https://www.fao.org/faostat/en/#data/GT
@@ -167,7 +169,7 @@ Linear regression attempts to model the relationship between two variables by fi
 
 ![image](https://user-images.githubusercontent.com/85472349/141962584-68e4989b-5cc5-4c49-9c5c-1b83b70c42d1.png)
 
-**Linear Regression results help us to view whether the Emission data is constantly increasing or decreasing, how the data are linearly related, Items which need immediate attention etc. From our Global data, its clear that CH4 and N2O are increasing rapidly and its time to focus on classifying countries into different zones.**
+> *Linear Regression results help us to view whether the Emission data is constantly increasing or decreasing, how the data are linearly related, Items which need immediate attention etc. From our Global data, its clear that CH4 and N2O are increasing rapidly and its time to focus on classifying countries into different zones.*
 
 
 ### <a name="classificationalgorithms"></a>Classification Algorithms
@@ -207,7 +209,7 @@ The confusion matrix from both models shows that the True Positive (TP) values a
 
 The above results show that the Logistic Regression Algorithm classifies the Emission more accurately than Random Forest Classifier. Since our data is Skewed (Stratify was used) and Imbalanced which results in more number of items in specific categories. This might be the reason that our Logistic performed better than the Random Forest. Also, Logistic regression performs better when the number of noise variables is less than or equal to the number of explanatory variables. (Noise variables - Difficult or impossible to control; Explanatory Variable - manipulated in an experiment by a researcher). So. which model performs better completely depends on our Data set.
 
-**With our Classification model, we can easily categories the countries into zones (Red, Orange, Yellow & Green) according to the impacting Items, Emission value and Population. Let's aim to have most of the countries into our Zone 0 in future**
+> *With our Classification model, we can easily categories the countries into zones (Red, Orange, Yellow & Green) according to the impacting Items, Emission value and Population. Let's aim to have most of the countries into our Zone 0 in future!*
 
 For more details about Machine Learning Model, please visit : [ML_Repo](https://github.com/saranyadurairaju/Module20-Final-Assignment)
 
@@ -230,10 +232,12 @@ Tableau emission story is incorporated as a Webpage using HTML to make it more f
 * Views of Item wise emission data 
 * Element wise emission details for countries
 
+**Complete Emission Analysis Webpage:** [Emission_Analysis_Web](http://emission-tableau1.herokuapp.com/)
+
+
 ![image](https://user-images.githubusercontent.com/85472349/142968936-c962540c-f957-44cb-8dfb-e3e0f7bceb77.png)
 
 
-**Complete Emission Analysis Webpage:** [Emission_Analysis_Web](http://emission-tableau1.herokuapp.com/)
 
 #### Emission Guage Meter 
 
@@ -266,7 +270,7 @@ The below tools and softwares are used for this project:
 * Categorized the data into Zones according to the Emission value
 * Easy and Interactive dashboard data visualization
 
-**With our results, its easy to predict where and how fast the action needs to be taken. Hoping to bring all the countries into our Green Zone soon!!!**
+***With our results, its easy to predict where and how fast the action needs to be taken. Hoping to bring all the countries into our Green Zone soon!!!***
 
 
 ![image](https://user-images.githubusercontent.com/85472349/142783875-e54ce30a-3125-43bd-af08-7d16a864cc34.png)
