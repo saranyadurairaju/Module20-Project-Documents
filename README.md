@@ -92,7 +92,7 @@ The source data was analyzed properly and cleaned for further processing. Below 
 
 * Uncleaned Emission and Population data are moved in to two separate data frames
 
-* Dropped the "Unit" columns from both Emission and Population datasets as it contains the same information(**Emission** - Kilotonnes, **Population** - 1000persons)
+* Dropped the "Unit" columns from both Emission and Population datasets as it contains the same information(**Emission** - Kilotons, **Population** - 1000persons)
 
 * Dropped the Years from 1961 to 1989 as it have very negligible informations.
 
@@ -108,11 +108,14 @@ The source data was analyzed properly and cleaned for further processing. Below 
 
 * Emission over years are plotted using a scatter plot
 
+![image](https://user-images.githubusercontent.com/85472349/142782476-8dfd8342-cc50-4952-8521-a81ca4f3c965.png)
+
+
 * Percentage of Emission caused by different Items such as Rice Cultivation, Manure Management, Savanna Fire etc. are plotted
 
 * The Items causing CH4, N2O & CO2 emissions are seperatly plotted using Pie charts.
 
-![image](https://user-images.githubusercontent.com/85472349/142782476-8dfd8342-cc50-4952-8521-a81ca4f3c965.png)
+![image](https://user-images.githubusercontent.com/85472349/142969306-d7775714-a652-4f32-9268-a5048f696285.png)
 
 
 **Results**
@@ -136,7 +139,8 @@ The source data was analyzed properly and cleaned for further processing. Below 
 
 * The data is then moved to AWS S3 bucket for project Analyis and Postgres for storage, future data retrieval
 
-![image](https://user-images.githubusercontent.com/85472349/142781510-71497eac-63e7-4fad-b5d6-0dbe9e3a720f.png)
+![image](https://user-images.githubusercontent.com/85472349/142969405-254b6684-8c16-4f85-aae6-62f47142f3a8.png)
+
 
 ### Subtables
 
@@ -146,7 +150,7 @@ The source data was analyzed properly and cleaned for further processing. Below 
 
 * This helps us in Easy storage, data backup and efficiency
 
-![image](https://user-images.githubusercontent.com/85472349/142781510-71497eac-63e7-4fad-b5d6-0dbe9e3a720f.png)
+![image](https://user-images.githubusercontent.com/85472349/142969427-40ff298e-a925-4eec-9787-090d1a0e2429.png)
 
 
 ## <a name="machinelearning"></a>Machine Learning
@@ -163,7 +167,7 @@ Linear regression attempts to model the relationship between two variables by fi
 
 ![image](https://user-images.githubusercontent.com/85472349/141962584-68e4989b-5cc5-4c49-9c5c-1b83b70c42d1.png)
 
-```Linear Regression results help us to view whether the Emission data is constantly increasing or decreasing, how the data are linearly related, Items which need immediate attention etc. ```
+```Linear Regression results help us to view whether the Emission data is constantly increasing or decreasing, how the data are linearly related, Items which need immediate attention etc. From our Global data, its clear that CH4 and N2O are increasing rapidly and its time to focus on classifying countries into different zones. ```
 
 
 ### <a name="classificationalgorithms"></a>Classification Algorithms
@@ -195,6 +199,8 @@ A random forest classifier works with data having discrete labels or better know
 
 ### ML Results
 
+The confusion matrix from both models shows that the True Positive (TP) values are relatively high. Also, Type I, Type II errors are also less. Compare to Random Forest, Logistic Regression shows good results. Below table represents the classification report values of both Elements from the models. 
+
 ![image](https://user-images.githubusercontent.com/85472349/141973384-fcd1b24f-42be-4f14-a5db-994ff5471916.png)
 
 ### ML Summary
@@ -215,14 +221,6 @@ Static Webpage is created to summarize and visualize the analytical charts and M
 
 Analysis results: [static page](https://saranyadurairaju.github.io/Module20-static-webpage/)
 
-### Emission Guage Meter 
-
-Select the country and view the Emission value and the corresponding zones in Gauge:
-
-![image](https://user-images.githubusercontent.com/85472349/142941076-edd9a19a-54ba-47d6-99bb-bd74af704e23.png)
-
-For more details: [gauge_repo](https://github.com/saranyadurairaju/Module20-Final-Assignment)
-
 
 ### <a name="heroku"></a>Dashboard
 
@@ -232,7 +230,20 @@ Tableau emission story is incorporated as a Webpage using HTML to make it more f
 * Views of Item wise emission data 
 * Element wise emission details for countries
 
-Complete Emission Analysis Webpage: [Emission_Analysis_Web](http://emission-tableau1.herokuapp.com/)
+![image](https://user-images.githubusercontent.com/85472349/142968936-c962540c-f957-44cb-8dfb-e3e0f7bceb77.png)
+
+
+**Complete Emission Analysis Webpage:** [Emission_Analysis_Web](http://emission-tableau1.herokuapp.com/)
+
+#### Emission Guage Meter 
+
+The country and the Emission value with corresponding zones can be viewed in Gauge meter like below:
+
+![image](https://user-images.githubusercontent.com/85472349/142968131-9ec781af-4cf2-4e15-90ab-d8e44d403957.png)
+
+
+For more details about the code and implementation, please visit : [gauge_repo](https://github.com/Ruma-T/gaugemeter)
+
  
 ## <a name="tech">Technologies</a>
 
