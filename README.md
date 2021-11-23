@@ -10,7 +10,7 @@ Presentation: [Link to Presentation](https://docs.google.com/presentation/d/12On
 Analysis dashboard:  [Link to Web Page](http://emission-tableau1.herokuapp.com/)
 
 
-![image](https://github.com/bireshk/DataAnalyticsProject/blob/main/Image/The-Glasgow-Climate-Change-Summit039s-Global-Stakes.jpg)
+![image](https://user-images.githubusercontent.com/85472349/142972825-2e1eb5e3-9763-45aa-8cc7-17678aecc87a.png)
 
 
 ## Table of Contents
@@ -167,7 +167,7 @@ Linear regression attempts to model the relationship between two variables by fi
 
 ![image](https://user-images.githubusercontent.com/85472349/141962584-68e4989b-5cc5-4c49-9c5c-1b83b70c42d1.png)
 
-```Linear Regression results help us to view whether the Emission data is constantly increasing or decreasing, how the data are linearly related, Items which need immediate attention etc. From our Global data, its clear that CH4 and N2O are increasing rapidly and its time to focus on classifying countries into different zones. ```
+**Linear Regression results help us to view whether the Emission data is constantly increasing or decreasing, how the data are linearly related, Items which need immediate attention etc. From our Global data, its clear that CH4 and N2O are increasing rapidly and its time to focus on classifying countries into different zones.**
 
 
 ### <a name="classificationalgorithms"></a>Classification Algorithms
@@ -207,7 +207,7 @@ The confusion matrix from both models shows that the True Positive (TP) values a
 
 The above results show that the Logistic Regression Algorithm classifies the Emission more accurately than Random Forest Classifier. Since our data is Skewed (Stratify was used) and Imbalanced which results in more number of items in specific categories. This might be the reason that our Logistic performed better than the Random Forest. Also, Logistic regression performs better when the number of noise variables is less than or equal to the number of explanatory variables. (Noise variables - Difficult or impossible to control; Explanatory Variable - manipulated in an experiment by a researcher). So. which model performs better completely depends on our Data set.
 
-```With our Classification model, we can easily categories the countries into zones (Red, Orange, Yellow & Green) according to the impacting Items, Emission value and Population. Let's aim to have most of the countries into our Zone 0 in future```
+**With our Classification model, we can easily categories the countries into zones (Red, Orange, Yellow & Green) according to the impacting Items, Emission value and Population. Let's aim to have most of the countries into our Zone 0 in future**
 
 For more details about Machine Learning Model, please visit : [ML_Repo](https://github.com/saranyadurairaju/Module20-Final-Assignment)
 
