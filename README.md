@@ -9,7 +9,7 @@ Presentation: [Link to Presentation](https://1drv.ms/p/s!ArGb1IDaYh21vi0wHKInS7d
 
 Analysis dashboard:  [Link to Web Page](http://emission-tableau1.herokuapp.com/)
 
-PDF Version of ReadME:  [Report.pdf](https://drive.google.com/file/d/16TF46muQNI6UEDGVST8ZQ7eZqssZ9NsR/view?usp=sharing)
+GitHub Link:  [GitHub](https://github.com/bireshk/DataAnalyticsProject)
 
 
 ![image](https://user-images.githubusercontent.com/85472349/142972825-2e1eb5e3-9763-45aa-8cc7-17678aecc87a.png)
