@@ -274,13 +274,14 @@ The below tools and softwares are used for this project:
 
 ## <a name="future"></a>Recommendation
 
-If this project can be extended for some more time, the below things can be done:
+If this project was extended for some more time, the below improvisations could be done:
 
 * Try to add more features to predict the future Emission
 * More Classification Models
 * Categorization with equal intervals
 * Webpage to scrap recent data 
 * Portal to calculate future emission with given values
+
 
 ## <a name="result"></a>Summary
 
